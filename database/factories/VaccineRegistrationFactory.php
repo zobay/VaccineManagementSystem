@@ -20,6 +20,7 @@ class VaccineRegistrationFactory extends Factory
             'center_id' => $center->id,
             'nid' => generateRandomDigit(13),
             'name' => $this->faker->name,
+            'email' => $this->faker->email(),
             'dob' => $this->faker->date(),
             'phone' => generateRandomDigit(11),
             'phone_verified_at' => $this->faker->date(),

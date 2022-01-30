@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::any('/register', [VaccineRegistrationController::class, 'create']);
+Route::any('/registration', [VaccineRegistrationController::class, 'create']);
+Route::any('/store-registration', [VaccineRegistrationController::class, 'store'])->name('store-registration');

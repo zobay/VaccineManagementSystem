@@ -17,10 +17,11 @@ class CreateVaccineRegistrationTable extends Migration
             $table->id();
             $table->string('nid');
             $table->string('name');
+            $table->string('email');
             $table->string('dob');
             $table->string('phone');
             $table->foreignId('center_id')->constrained('centers');
-            $table->timestamp('phone_verified_at');
+            $table->timestamp('phone_verified_at')->nullable();
             $table->timestamps();
         });
     }
